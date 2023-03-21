@@ -1,14 +1,14 @@
 //Define a class which has a main method, it initializes two integers, displays their values, swaps them without using a third variable and again displays their values.
 import java.util.Scanner;
-
 public class Swap {
-    void swap(int A, int B)
+    int A , B;
+    void swap(Swap obj)
     {
         System.out.println("Before Swap");
         System.out.println("A is "+ A +" and B is "+B);
-        A = A+B;
-        B = A-B;
-        A = A-B;
+        obj.A = obj.A+obj.B;
+        obj.B = obj.A-obj.B;
+        obj.A = obj.A-obj.B;
         System.out.println("After Swap");
         System.out.println("A is "+ A +" and B is "+B);
     }
@@ -20,9 +20,9 @@ public static void main(String[] args)
     int B = input.nextInt();
 
     Swap obj = new Swap();
-    obj.swap(A,B);
-    System.out.println("A is "+ A +" and B is "+B);
-
-
+    obj.A = A;
+    obj.B = B;
+    obj.swap(obj);
+    System.out.println("A is "+ obj.A +" and B is "+obj.B);
 }
 }
