@@ -7,7 +7,6 @@ class Quadrilateral {
         length = l;
         breadth = b;
     }
-
     void display() {
         System.out.println("length is " + length);
         System.out.println("breadth is " + breadth);
@@ -45,7 +44,7 @@ public class QuadTest {
         Rectangle R2 = new Rectangle(23, 45);
         Cube C1 = new Cube(12);
         Cube C2 = new Cube(12);
-//        for rectangle
+
         System.out.println("_________________________________________________________");
 
         R1.area();
