@@ -1,32 +1,20 @@
-import java.util.Scanner;
 public class Replace_random {
-    int arr[] = new int[10];
-    int make_zero(int rand) {
-        int sum = 0;
+    int make_zero(int arr[] , int rand) {
+        int sum = 10*(10+1)/2;
         for (int i = 0; i < 10; i++) {
-            sum += arr[i];
-            if (i == rand)
+            if (arr[i] == rand)
                 arr[i] = 0;
-        }
-        for (int i = 0; i < 10; i++)
+            System.out.print(arr[i] + " ");
             sum -= arr[i];
+        }
+        System.out.println();
         return sum;
     }
-    void printArr() {
-        System.out.println("After Array is ");
-        for (int i = 0; i < 10; i++)
-            System.out.print(arr[i] + " ");
-        System.out.println();
-    }
     public static void main(String[] args) {
+        int arr[] =  {1,3,2,9,8,7,5,4,6,10};
         Replace_random obj = new Replace_random();
-        Scanner sc = new Scanner(System.in);
-        System.out.println("Enter 10 Element into the array form 1 - 10");
-        for (int i = 0; i < 10; i++)
-            obj.arr[i] = sc.nextInt();
-        int rand = (int) (Math.random() * 10)+1;
-        int num = obj.make_zero(rand);
-        obj.printArr();
+        int rand = 9;
+        int num = obj.make_zero(arr,rand);
         System.out.println("Replaced Element is " + num);
     }
 }
